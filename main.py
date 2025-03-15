@@ -18,7 +18,7 @@ Math_template ="""
 Can you generate Math problem for grade 6th student on {Math_Topic} with multiple choise answer and also provide answer with explanation
 """
 
-Math_prompt = PromptTemplate(template = Math_template, input_variables =['Prompt_Math_Topic'])
+Math_prompt = PromptTemplate(template = Math_template, input_variables =['Math_Topic'])
 
 #Create LLM Chain using theprompt template and Model
 Math_chain = Math_prompt | gemini_model
@@ -35,6 +35,6 @@ Math_topic = st.selectbox("Choose a topic for the tweet:", ["Percentage", "LCM",
 st.write("You selected:", Math_topic)
 
 if st.button("Generate"):
-    Math_Q = Math_chain.invoke({"Prompt_Math_topic" : Math_topic})
+    Math_Q = Math_chain.invoke({"Math_topic" : Math_topic})
     st.write(Math_Q.content)
 

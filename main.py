@@ -15,7 +15,7 @@ gemini_model = ChatGoogleGenerativeAI(model = "gemini-1.5-flash-latest")
 
 ###########################################################################
 Math_template ="""
-Can you generate one Math problem for grade 6th student on math topic {Math_Topic} with multiple choise answer and also provide answer with explanation
+Can you generate one Math problem for grade 6th student on math topic {Math_topic} with multiple choise answer and also provide answer with explanation
 """
 Math_prompt = PromptTemplate(template = Math_template, input_variables =['Math_topic'])
 

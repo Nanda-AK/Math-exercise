@@ -74,7 +74,7 @@ Math_chain = Math_prompt | gemini_model
 st.header(" Math Exercise ")
 st.subheader(" Generate Math Exercise for practice 🤖 ")
 
-Math_topic = st.selectbox("Choose a Math topic for today Exercise : ", ["Percentage", "LCM", "HCF"])
+Math_topic = st.selectbox("Choose a Math topic for today's Exercise : ", ["Percentage", "LCM", "HCF"])
 st.write("You selected:", Math_topic)
 count = 1
 

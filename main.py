@@ -15,9 +15,9 @@ gemini_model = ChatGoogleGenerativeAI(model = "gemini-1.5-flash-latest")
 
 ###########################################################################
 Math_template ="""
-Can you generate {count} Math problem for grade 6th student on math topic {Math_Topic} with multiple choise answer and also provide answer with explanation
+Can you generate one Math problem for grade 6th student on math topic {Math_Topic} with multiple choise answer and also provide answer with explanation
 """
-  Math_prompt = PromptTemplate(template = Math_template, input_variables =['count','Math_topic'])
+  Math_prompt = PromptTemplate(template = Math_template, input_variables =['Math_topic'])
 
 #Create LLM Chain using theprompt template and Model
 Math_chain = Math_prompt | gemini_model
@@ -35,6 +35,6 @@ st.write("You selected:", Math_topic)
 count = 1
 
 if st.button("Generate"):
-    Math_Q = Math_chain.invoke({"count" : number, "Math_topic" : Math_topic})
+    Math_Q = Math_chain.invoke({"Math_topic" : Math_topic})
     st.write(Math_Q.content)
 

@@ -35,6 +35,6 @@ Math_topic = st.selectbox("Choose a topic for the tweet:", ["Percentage", "LCM",
 st.write("You selected:", Math_topic)
 
 if st.button("Generate"):
-    Math_Q = Math_chain.invoke("Prompt_Math_topic" : Math_topic})
+    Math_Q = Math_chain.invoke({"Prompt_Math_topic" : Math_topic})
     st.write(Math_Q.content)
 

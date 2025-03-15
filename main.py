@@ -18,6 +18,8 @@ response = gemini_model.invoke("Give me one math percentage problem for 6th grea
 st.header(" Math Exercise ")
 st.subheader(" Generate Math Exercise for practice 🤖 ")
 
+Math_topic = st.selectbox("Choose a topic for the tweet:", ["Percentage", "LCM", "HCF"])
+st.write("You selected:", Math_topic)
 
 if st.button("Generate"):
     #MathProblem = gemini_model.invoke({"number" : number, "topic" : topic})
